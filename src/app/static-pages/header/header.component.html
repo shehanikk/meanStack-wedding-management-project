@@ -3,10 +3,21 @@
     <a class="navbar-brand" href=" ">
       <img src="assets/images/main-logo.png" alt="HaniDay" width="120" height="45">
     </a>
-    <form class="d-flex" role="search">
+    <form class="d-flex ms-auto" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-secondary" type="submit">Search</button>
     </form>
+
+    <button class="btn">
+      <i class="bi bi-person-fill"></i>
+      </button>
+
+    <button class="btn">
+      <i class="bi bi-cart-fill"></i>
+    </button>
+
+
+
   </div>
 </nav>
 
@@ -16,14 +27,14 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0 ">
         <li ngbDropdown class="nav-item dropdown">
           <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Wedding
           </a>
           <ul ngbDropdownMenu class="dropdown-menu">
-            <li><a ngbDropdownItem class="dropdown-item" href="#">Wedding Stage</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="wedding">Wedding Stage</a></li>
             <li><a ngbDropdownItem class="dropdown-item" href="#">Wedding Flowers</a></li>
             <li><a ngbDropdownItem class="dropdown-item" href="#">Wedding Dance Groups</a></li>
             <li><a ngbDropdownItem class="dropdown-item" href="#">Wedding Musical Groups</a></li>
