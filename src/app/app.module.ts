@@ -11,6 +11,7 @@ import { AboutUsComponent } from './main-pages/about-us/about-us.component';
 import { WeddingComponent } from './navpages/wedding/wedding.component';
 import { UserpageComponent } from './navpages/userpage/userpage.component';
 import { SigninComponent } from './navpages/signin/signin.component';
+import { CartComponent } from './navpages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SigninComponent } from './navpages/signin/signin.component';
     AboutUsComponent,
     WeddingComponent,
     UserpageComponent,
-    SigninComponent
+    SigninComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
