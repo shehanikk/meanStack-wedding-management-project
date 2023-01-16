@@ -6,6 +6,8 @@ import { WeddingComponent } from './navpages/wedding/wedding.component';
 import { UserpageComponent } from './navpages/userpage/userpage.component';
 import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
+import { CheckoutComponent } from './navpages/checkout/checkout.component';
+import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path: 'userpage', component:UserpageComponent},
   {path: 'signup', component:SigninComponent},
   {path: 'cart', component:CartComponent},
+  {path: 'checkout', component:CheckoutComponent},
+  {path: 'client', component: ClientInforComponent},
 ];
 
 @NgModule({

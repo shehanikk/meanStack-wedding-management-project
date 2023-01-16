@@ -12,6 +12,8 @@ import { WeddingComponent } from './navpages/wedding/wedding.component';
 import { UserpageComponent } from './navpages/userpage/userpage.component';
 import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
+import { CheckoutComponent } from './navpages/checkout/checkout.component';
+import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CartComponent } from './navpages/cart/cart.component';
     WeddingComponent,
     UserpageComponent,
     SigninComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent,
+    ClientInforComponent
   ],
   imports: [
     BrowserModule,
