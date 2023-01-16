@@ -1,0 +1,13 @@
+---
+language: node_js
+node_js:
+  - 17
+before_install:
+  - cd backend  #file path eka wens krhn node eka thyena
+install:
+  - npm install
+cache:
+  directories:
+    - node_modules
+script:
+  -npm run
