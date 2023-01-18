@@ -14,6 +14,7 @@ import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
 import { CheckoutComponent } from './navpages/checkout/checkout.component';
 import { ClientInforComponent } from './admin/client-infor/client-infor.component';
+import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ClientInforComponent } from './admin/client-infor/client-infor.componen
     SigninComponent,
     CartComponent,
     CheckoutComponent,
-    ClientInforComponent
+    ClientInforComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,

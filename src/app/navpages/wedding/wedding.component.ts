@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemService } from 'src/app/services/item.service';
+import { Item } from 'src/app/shared/models/Item';
 
 @Component({
   selector: 'app-wedding',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeddingComponent implements OnInit {
 
-  constructor() { }
+  stages:Item[]=[];
+
+  constructor(private itemService: ItemService) {
+    this.stages = this.itemService.getAll();
+   }
 
   ngOnInit(): void {
   }

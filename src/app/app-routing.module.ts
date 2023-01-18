@@ -8,6 +8,7 @@ import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
 import { CheckoutComponent } from './navpages/checkout/checkout.component';
 import { ClientInforComponent } from './admin/client-infor/client-infor.component';
+import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'cart', component:CartComponent},
   {path: 'checkout', component:CheckoutComponent},
   {path: 'client', component: ClientInforComponent},
+  {path: 'stage/:id', component:ItemDetailsComponent}
 ];
 
 @NgModule({
