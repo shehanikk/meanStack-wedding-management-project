@@ -1,5 +1,11 @@
+<app-not-found-page
+[visible] = "!cart || !cart.item.length"
+notFoundMessage = "Cart is Empty!"
+resetLinkRout = "Go To Homepage"
+></app-not-found-page>
+
 <section class="h-100 h-custom" style=" background-color: #eeebebb9;">
-  <div class="container py-5 h-100">
+  <div class="container py-5 h-100" *ngIf="cart && cart.item.length">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
@@ -9,7 +15,7 @@
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
                     <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
-                    <h6 class="mb-0 text-muted">3 items</h6>
+                    <h6 class="mb-0 text-muted">{{cart.totalCount}} items</h6>
                   </div>
                   <hr class="my-4">
 

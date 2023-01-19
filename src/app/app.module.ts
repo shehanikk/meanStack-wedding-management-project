@@ -16,6 +16,7 @@ import { CheckoutComponent } from './navpages/checkout/checkout.component';
 import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
+import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OurProductsComponent } from './navpages/our-products/our-products.compo
     CheckoutComponent,
     ClientInforComponent,
     ItemDetailsComponent,
-    OurProductsComponent
+    OurProductsComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
