@@ -1,11 +1,42 @@
-<div class="container">
-  <img [src]="Stage.image">
 
-  <div class="details">
-    <div class="header">
-      <span class="name">
-        {{Stage.name}}
-      </span>
-    </div>
+<section id="about" class="about section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+              <div class="about-img">
+                  <img [src]="Stage.image" alt="" class="img-fluid"  width="400" style="padding-top: 20%; padding-bottom: 20%;" >
+              </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5" style="padding-top: 5%;">
+              <div class="about-text">
+                  <h2>
+                    <span class="name">
+                      {{Stage.name}}
+                    </span>
+                  </h2>
+
+                  <hr>
+
+                  <p>Lorem, ipsum dolor sit amet consectetur
+                      adipisicing elit. A iusto,
+                      distinctio doloremque porro harum odit illum deleniti facere molestias sequi
+                      sapiente ipsum modi sint omnis repudiandae atque iste tenetur
+                      vel non saepe! Eveniet nulla earum impedit maiores quasi veritatis tempora commodi.
+                       Rem quae unde alias quis necessitatibus iste fugiat laboriosam!</p>
+
+                    <hr>
+
+                      <span class="price">
+                        {{Stage.price |currency}}
+                      </span>
+
+                    <hr>
+
+                       <a (click)="addToCart()" class="btn btn-secondary">Add to cart</a>
+              </div>
+
+
+          </div>
+      </div>
   </div>
-</div>
+</section>
