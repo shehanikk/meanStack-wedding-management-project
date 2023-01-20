@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 17
 before_install:
-  - cd backend  #file path eka wens krhn node eka thyena
+  - cd wedding-backend  #file path eka wens krhn node eka thyena
 install:
   - npm install
 cache:
