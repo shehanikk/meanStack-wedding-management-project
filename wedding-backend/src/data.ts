@@ -21,3 +21,22 @@ export const example_weddingStage: any[] = [
     price: 3001
   },
 ]
+
+export const sample_users: any[] = [
+  {
+    name: "shehani kavindya",
+    email: "park.shehani.7@gmail.com",
+    password: "1111",
+    address: "sri lanka kurunagala",
+    isAdmin: true,
+  },
+
+    {
+      name: "dilshi ayesha",
+      email: "dilshi@gmail.com",
+      password: "2222",
+      address: "Shanghai",
+      isAdmin: false,
+    },
+
+];

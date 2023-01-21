@@ -18,6 +18,7 @@ import { ClientInforComponent } from './admin/client-infor/client-infor.componen
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
 import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
