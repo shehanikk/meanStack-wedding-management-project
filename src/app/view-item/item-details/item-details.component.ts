@@ -14,8 +14,11 @@ export class ItemDetailsComponent implements OnInit {
   Stage!: Item;
   constructor(activatedRoute:ActivatedRoute, itemServices:ItemService, private cartService:CartService, private router:Router) {
     activatedRoute.params.subscribe((params) => {
-      if(params['id'])
-      this.Stage = itemServices.getStagesById(params['id'])
+      if(params.id)
+      itemServices.getStagesById(params.id).subscribe(serverProduct => {
+        this.Stage = serverProduct;
+      })
+
     })
 
   }
