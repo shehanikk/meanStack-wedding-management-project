@@ -5,47 +5,59 @@
 
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-2 pt-5 pt-xl-0 mt-xl-n5">
 
-          <form >
+          <form [formGroup]="registerForm" (ngSubmit)="submit()" >
 
             <h1 class="text-uppercase text-center mb-2"> Sign Up </h1>
             <hr>
 
-            <div class="form-outline mb-3">
-              <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-              <label class="form-label" for="form3Example1cg">Your Name</label>
-            </div>
+            <text-input
+            [control]="fc.name"
+            [showErrorsWhen]="isSubmitted"
+            label="Name">
+            </text-input>
 
-            <div class="form-outline mb-3">
-              <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-              <label class="form-label" for="form3Example3cg">Your Email</label>
-            </div>
+            <text-input
+            [control]="fc.email"
+            [showErrorsWhen]="isSubmitted"
+            label="Email"
+            type="email">
+            </text-input>
 
-            <div class="form-outline mb-3">
-              <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-              <label class="form-label" for="form3Example4cg">Password</label>
-            </div>
+            <text-input
+            [control]="fc.password"
+            [showErrorsWhen]="isSubmitted"
+            label="Password"
+            type="password">
+            </text-input>
 
-            <div class="form-outline mb-3">
-              <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-              <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-            </div>
+            <text-input
+            [control]="fc.confirmPassword"
+            [showErrorsWhen]="isSubmitted"
+            label="Confirm Password"
+            type="password">
+            </text-input>
+
+            <text-input
+            [control]="fc.address"
+            [showErrorsWhen]="isSubmitted"
+            label="Address">
+            </text-input>
 
             <hr>
 
-            <div class="form-check d-flex justify-content-center mb-4">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-              <label class="form-check-label" for="form2Example3g">
-                I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
-              </label>
+            <default-button text="Register"></default-button>
+
+
+            <div class="login">
+              Have already an account? &nbsp;
+              <a routerLink="/userpage" [queryParams]="{returnUrl: returnUrl}">
+                Login Here
+              </a>
             </div>
 
-            <div class="d-flex justify-content-center">
 
-               <button class="btn btn-dark btn-lg btn-block"  type="button">Register</button>
-            </div>
-
-            <p class="text-center text-muted mt-4 mb-0">Have already an account? <a href="userpage"
-                class="fw-bold text-body"><u>Login here</u></a></p>
+            <!-- <p class="text-center text-muted mt-4 mb-0">Have already an account? <a href="userpage"
+                class="fw-bold text-body"><u>Login here</u></a></p> -->
 
           </form>
         </div>
