@@ -20,32 +20,22 @@
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example17">Email address</label>
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" formControlName="email"/>
 
-                   <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-                      <div *ngIf="fc.email.errors.required">Please fill in this field</div>
-                      <div *ngIf="fc.email.errors.email">The provided email is invalid</div>
-                   </div>
+                  <text-input
+                  [control]="fc.email"
+                  [showErrorsWhen]="isSubmitted"
+                  type="email"
+                  label="Email">
+                  </text-input>
 
-                  </div>
+                  <text-input
+                  [control]="fc.password"
+                  [showErrorsWhen]="isSubmitted"
+                  type="password"
+                  label="Password">
+                </text-input>
 
-
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example27">Password</label>
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" formControlName="password" />
-                    <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-                      <div *ngIf="fc.password.errors.required">Please fill in this field</div>
-                    </div>
-                  </div>
-
-
-
-
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block"  type="submit">Login</button>
-                  </div>
+                <default-button text="Login"></default-button>
 
                   <a class="small text-muted" href="#!">Forgot password?</a>
                   <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?

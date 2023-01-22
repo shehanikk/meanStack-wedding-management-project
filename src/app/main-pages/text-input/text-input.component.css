@@ -1,0 +1,7 @@
+/* css code have */
+
+input::placeholder{
+  color: #dfdfdf;
+  font-size: 0.95rem;
+
+}

@@ -20,7 +20,11 @@ import { OurProductsComponent } from './navpages/our-products/our-products.compo
 import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { InputContainerComponent } from './main-pages/input-container/input-container.component';
+import { InputValidationComponent } from './main-pages/input-validation/input-validation.component';
+import { TextInputComponent } from './main-pages/text-input/text-input.component';
+import { DefaultButtonComponent } from './main-pages/default-button/default-button.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     ClientInforComponent,
     ItemDetailsComponent,
     OurProductsComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
+    DefaultButtonComponent
   ],
   imports: [
     BrowserModule,
