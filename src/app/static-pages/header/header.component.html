@@ -8,13 +8,18 @@
       <button class="btn btn-secondary" type="submit" >Search</button>
     </form>
 
-    <button class="btn" routerLink="userpage">
+    <button class="btn" routerLink="userpage" *ngIf="!user.token" >
       <i class="bi bi-person-fill"></i>
-      </button>
+    </button>
+
+    <a>{{user.name}}</a>
+
+    <button type="button" class="btn btn-link" (click)="logout()">Logout</button>
 
     <button class="btn" routerLink="cart">
       <i class="bi bi-cart-fill"></i>
     </button>
+
 
 
 
