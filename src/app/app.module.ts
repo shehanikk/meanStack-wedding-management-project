@@ -30,6 +30,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { OrderItemListComponent } from './navpages/order-item-list/order-item-list.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './payment/paypal-button/paypal-button.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PaymentPageComponent } from './payment/payment-page/payment-page.compon
     DefaultButtonComponent,
     LoadingComponent,
     OrderItemListComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    PaypalButtonComponent
   ],
   imports: [
     BrowserModule,
