@@ -28,6 +28,8 @@ import { DefaultButtonComponent } from './main-pages/default-button/default-butt
 import { LoadingComponent } from './main-pages/loading/loading.component'
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { OrderItemListComponent } from './navpages/order-item-list/order-item-list.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { OrderItemListComponent } from './navpages/order-item-list/order-item-li
     TextInputComponent,
     DefaultButtonComponent,
     LoadingComponent,
-    OrderItemListComponent
+    OrderItemListComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ import { OrderItemListComponent } from './navpages/order-item-list/order-item-li
     })
   ],
   providers: [
+    {provide:HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     {provide:HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]

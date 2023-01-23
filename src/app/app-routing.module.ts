@@ -10,6 +10,8 @@ import { CheckoutComponent } from './navpages/checkout/checkout.component';
 import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
+import { AuthGuard } from './auth/guards/auth.guard';
+import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path: 'client', component: ClientInforComponent},
   {path: 'stage/:id', component:ItemDetailsComponent},
   {path: 'cart', component:CartComponent},
-  {path: 'ourproduct', component: OurProductsComponent}
+  {path: 'ourproduct', component: OurProductsComponent},
+  {path: 'payment',component: PaymentPageComponent}
 ];
 
 @NgModule({
@@ -30,3 +33,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+// canActivate:[AuthGuard]
