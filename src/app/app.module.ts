@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +24,10 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './main-pages/input-container/input-container.component';
 import { InputValidationComponent } from './main-pages/input-validation/input-validation.component';
 import { TextInputComponent } from './main-pages/text-input/text-input.component';
-import { DefaultButtonComponent } from './main-pages/default-button/default-button.component'
+import { DefaultButtonComponent } from './main-pages/default-button/default-button.component';
+import { LoadingComponent } from './main-pages/loading/loading.component'
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { OrderItemListComponent } from './navpages/order-item-list/order-item-list.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { DefaultButtonComponent } from './main-pages/default-button/default-butt
     InputContainerComponent,
     InputValidationComponent,
     TextInputComponent,
-    DefaultButtonComponent
+    DefaultButtonComponent,
+    LoadingComponent,
+    OrderItemListComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,9 @@ import { DefaultButtonComponent } from './main-pages/default-button/default-butt
       newestOnTop:false
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
