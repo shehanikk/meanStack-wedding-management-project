@@ -12,6 +12,7 @@ import { ItemDetailsComponent } from './view-item/item-details/item-details.comp
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
+import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'stage/:id', component:ItemDetailsComponent},
   {path: 'cart', component:CartComponent},
   {path: 'ourproduct', component: OurProductsComponent},
-  {path: 'payment',component: PaymentPageComponent}
+  {path: 'payment',component: PaymentPageComponent},
+  {path: 'track/:orderId', component:OrderTrackPageComponent}
 ];
 
 @NgModule({
