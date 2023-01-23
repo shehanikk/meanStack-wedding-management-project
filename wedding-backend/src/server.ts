@@ -6,6 +6,7 @@ import express from 'express';
 import weddingRouter from './routers/wedding.router';
 import userRouter from './routers/user.router';
 import { dbConnect } from './configs/database.config';
+import orderRouter from './routers/order.router';
 
 dbConnect();
 
@@ -21,6 +22,7 @@ app.use(cors({
 
 app.use("/api/wedding", weddingRouter);
 app.use("/api/users", userRouter);
+app.use("/api/orders", orderRouter);
 
 // app.get("/api/wedding", (req, res) => {
 //   res.send(example_weddingStage);
