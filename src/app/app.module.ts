@@ -31,6 +31,7 @@ import { OrderItemListComponent } from './navpages/order-item-list/order-item-li
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './payment/paypal-button/paypal-button.component';
+import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { PaypalButtonComponent } from './payment/paypal-button/paypal-button.com
     LoadingComponent,
     OrderItemListComponent,
     PaymentPageComponent,
-    PaypalButtonComponent
+    PaypalButtonComponent,
+    OrderTrackPageComponent
   ],
   imports: [
     BrowserModule,

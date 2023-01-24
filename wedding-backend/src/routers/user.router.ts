@@ -25,9 +25,9 @@ router.get("/seed", asyncHandler(
 router.post("/login", asyncHandler(
    async (req, res) => {
     const {email, password} =req.body;
-    const user = await UserModel.findOne({email, password});
+    const user = await UserModel.findOne({email});
 
-    if(user){
+    if(user && (await bcrypt.compare(password,user.password))) {
       res.send(res.send({
         id:user.id,
         name:user.name,
