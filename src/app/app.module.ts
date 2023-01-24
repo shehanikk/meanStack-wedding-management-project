@@ -14,7 +14,6 @@ import { UserpageComponent } from './navpages/userpage/userpage.component';
 import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
 import { CheckoutComponent } from './navpages/checkout/checkout.component';
-import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
 import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.component';
@@ -32,6 +31,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './payment/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
+import { AdminComponent } from './admin-pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,6 @@ import { OrderTrackPageComponent } from './payment/order-track-page/order-track-
     SigninComponent,
     CartComponent,
     CheckoutComponent,
-    ClientInforComponent,
     ItemDetailsComponent,
     OurProductsComponent,
     NotFoundPageComponent,
@@ -57,7 +56,8 @@ import { OrderTrackPageComponent } from './payment/order-track-page/order-track-
     OrderItemListComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
-    OrderTrackPageComponent
+    OrderTrackPageComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
