@@ -7,12 +7,12 @@ import { UserpageComponent } from './navpages/userpage/userpage.component';
 import { SigninComponent } from './navpages/signin/signin.component';
 import { CartComponent } from './navpages/cart/cart.component';
 import { CheckoutComponent } from './navpages/checkout/checkout.component';
-import { ClientInforComponent } from './admin/client-infor/client-infor.component';
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
+import { AdminComponent } from './admin-pages/admin/admin.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,12 +22,12 @@ const routes: Routes = [
   {path: 'signup', component:SigninComponent},
   {path: 'cart', component:CartComponent},
   {path: 'checkout', component:CheckoutComponent},
-  {path: 'client', component: ClientInforComponent},
   {path: 'stage/:id', component:ItemDetailsComponent},
   {path: 'cart', component:CartComponent},
   {path: 'ourproduct', component: OurProductsComponent},
   {path: 'payment',component: PaymentPageComponent},
-  {path: 'track/:orderId', component:OrderTrackPageComponent}
+  {path: 'track/:orderId', component:OrderTrackPageComponent},
+  {path: 'admin', component:AdminComponent}
 ];
 
 @NgModule({
