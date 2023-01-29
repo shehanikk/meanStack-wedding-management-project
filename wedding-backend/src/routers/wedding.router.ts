@@ -1,7 +1,8 @@
 import {Router} from 'express';
 import { example_weddingStage } from '../data';
 import asyncHandler from 'express-async-handler';
-import { ItemModel } from '../models/wedding.model';
+import { Item, ItemModel } from '../models/wedding.model';
+import { HTTP_BAD_REQUEST } from '../constants/http_status';
 
 const router = Router();
 
@@ -38,6 +39,29 @@ router.get("/:productId", asyncHandler(
   async (req, res) => {
     const products = await ItemModel.findById(req.params.productId);
     res.send(products);
+  }
+))
+
+router.post('/addItem' , asyncHandler(
+  async(req, res ) => {
+    const {name, price,image} = req.body;
+    try {
+      const newProduct:Item = {
+        id: '',
+        name,
+        price,
+        image
+      }
+
+      await ItemModel.create(newProduct);
+      res.status(201).json({
+        msg:'success'
+      })
+    } catch (error) {
+      res.status(HTTP_BAD_REQUEST).send();
+
+    }
+
   }
 ))
 

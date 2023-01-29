@@ -1,5 +1,53 @@
-<h3 class="text-center" style="padding-top: 4%;"> Admin Panel</h3>
-<input type="text" placeholder="id"/>
-<input type="text" placeholder="name"/>
-<input type="text" placeholder="price"/>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
 
+    <div class="container" style="justify-content: center; justify-self: center;">
+      <div class="details">
+        <form #form="ngForm"   (ngSubmit)="submit(form)">
+          <input
+          ngModel
+          name="name"
+    type="text"
+          placeholder="Name"
+        />
+    <br>
+        <input
+        ngModel
+        name="price"
+    type="number"
+        placeholder="price"
+      />
+    <br>
+      <input
+      ngModel
+      name="image"
+    type="text"
+      placeholder="image"
+    />
+    <br>
+          <!-- <select ngModel name="category">
+            <option value="camera">Camera</option>
+            <option value="lenses">Lenses</option>
+            <option value="tripods">Tripods</option>
+            <option value="other-items">Other Items</option>
+          </select> -->
+
+        <default-button type="submit" text="Add"></default-button>
+
+
+
+      </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">.ka</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">..aaa.</div>
+</div>
