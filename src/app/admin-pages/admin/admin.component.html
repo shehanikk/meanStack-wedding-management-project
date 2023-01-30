@@ -1,6 +1,10 @@
+<div class="section-header text-center pb-5" style="padding-top: 4%;">
+  <h2>Admin page</h2>
+</div>
+
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Add product</button>
     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
   </div>
@@ -8,7 +12,7 @@
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
 
-    <div class="container" style="justify-content: center; justify-self: center;">
+    <!-- <div class="container" style="justify-content: center; justify-self: center;">
       <div class="details">
         <form #form="ngForm"   (ngSubmit)="submit(form)">
           <input
@@ -32,22 +36,93 @@
       placeholder="image"
     />
     <br>
-          <!-- <select ngModel name="category">
-            <option value="camera">Camera</option>
-            <option value="lenses">Lenses</option>
-            <option value="tripods">Tripods</option>
-            <option value="other-items">Other Items</option>
-          </select> -->
+          <select ngModel name="type">
+            <option value="stage">Stage</option>
+            <option value="table">Lenses</option>
+            <option value="danceMusical">Tripods</option>
+            <option value="cars">Other Items</option>
+          </select>
 
         <default-button type="submit" text="Add"></default-button>
 
-
-
       </form>
       </div>
-    </div>
+    </div> -->
+
+
+
+
+    <section class="h-100 h-custom" style="background-color: #f5f5f5;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Add product form</h3>
+
+                <form class="px-md-2" #form="ngForm"   (ngSubmit)="submit(form)">
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example1q" class="form-control" ngModel name="name" type="text"  />
+                    <label class="form-label" for="form3Example1q">Product name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example1q" class="form-control"  ngModel name="price" type="number"/>
+                    <label class="form-label" for="form3Example1q">Price</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example1q" class="form-control"  ngModel name="image" type="text" />
+                    <label class="form-label" for="form3Example1q">Image</label>
+                  </div>
+
+                  <hr>
+
+                  <div class="mb-4">
+
+                    <p> Select category type</p>
+                    <select ngModel name="type">
+                      <option value="stage">Wedding stages</option>
+                      <option value="table">Wedding tables</option>
+                      <option value="danceMusical">Dance and musical groups</option>
+                      <option value="cars">Wedding cars</option>
+                    </select>
+
+                  </div>
+
+
+                  <button  class="btn btn-success btn-lg mb-1" type="submit">Submit</button>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
 
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">.ka</div>
+
+
+
+
+
+
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+
+
+  </div>
+
+
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">..aaa.</div>
 </div>

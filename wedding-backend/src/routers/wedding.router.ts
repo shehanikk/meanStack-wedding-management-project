@@ -21,7 +21,7 @@ router.get("/seed", asyncHandler(
 
 router.get("/", asyncHandler(
   async (req, res) => {
-    const stage = await ItemModel.find();
+    const stage = await ItemModel.find({type:'stage'});
     res.send(stage);
   }
 ))
@@ -44,13 +44,14 @@ router.get("/:productId", asyncHandler(
 
 router.post('/addItem' , asyncHandler(
   async(req, res ) => {
-    const {name, price,image} = req.body;
+    const {name, price,image,type} = req.body;
     try {
       const newProduct:Item = {
         id: '',
         name,
         price,
-        image
+        image,
+        type
       }
 
       await ItemModel.create(newProduct);

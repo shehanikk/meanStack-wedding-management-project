@@ -33,7 +33,8 @@ export class AdminComponent implements OnInit {
     const product :IAddItem = {
       name: fv.name,
       price: fv.price,
-      image: fv.image
+      image: fv.image,
+      type: fv.type
     };
 
     this.itemService.addItem(product).subscribe(_ => {

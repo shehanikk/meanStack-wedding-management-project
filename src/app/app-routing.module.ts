@@ -13,6 +13,9 @@ import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './payment/payment-page/payment-page.component';
 import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
 import { AdminComponent } from './admin-pages/admin/admin.component';
+import { WeddingTableComponent } from './wedding-tab-pages/wedding-table/wedding-table.component';
+import { DanceMusicalComponent } from './wedding-tab-pages/dance-musical/dance-musical.component';
+import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-cars.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,7 +30,11 @@ const routes: Routes = [
   {path: 'ourproduct', component: OurProductsComponent},
   {path: 'payment',component: PaymentPageComponent},
   {path: 'track/:orderId', component:OrderTrackPageComponent},
-  {path: 'admin', component:AdminComponent}
+  {path: 'admin', component:AdminComponent},
+  {path: 'table', component:WeddingTableComponent},
+  {path: 'danceMusical', component:DanceMusicalComponent},
+  {path: 'weddingCar',component:WeddingCarsComponent}
+
 ];
 
 @NgModule({
