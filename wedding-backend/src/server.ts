@@ -8,6 +8,13 @@ import userRouter from './routers/user.router';
 import { dbConnect } from './configs/database.config';
 import orderRouter from './routers/order.router';
 import itemRouter from './routers/item.router';
+import weddingTableRouter from './routers/weddingTable.router';
+import danceMusicalRouter from './routers/danceMusical.router';
+import weddingCarRouter from './routers/weddingCar.router';
+import partyDjRouter from './routers/partyDj.router';
+import balloonRouter from './routers/balloon.router';
+import stageDecoRouter from './routers/stageDeco.router';
+import redCarpetRouter from './routers/redCarpet.router';
 
 dbConnect();
 
@@ -25,6 +32,16 @@ app.use("/api/wedding", weddingRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/items", itemRouter);
+app.use("/api/weddingTable", weddingTableRouter);
+app.use("/api/danceMusical", danceMusicalRouter);
+app.use("/api/weddingCar", weddingCarRouter);
+app.use("/api/partyDj", partyDjRouter);
+app.use("/api/balloon", balloonRouter);
+app.use("/api/stageDeco", stageDecoRouter);
+app.use("/api/redCarpet", redCarpetRouter);
+
+
+
 
 
 

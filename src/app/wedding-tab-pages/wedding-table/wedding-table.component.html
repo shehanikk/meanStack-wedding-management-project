@@ -1,1 +1,22 @@
-<p>wedding-table works!</p>
+<ul>
+  <li *ngFor="let tables  of tables">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <a routerLink="/stage/{{tables.id}}">
+      <img [src]="tables.image || ''" [alt]="tables?.name" />
+    </a>
+      <div class="content">
+        <p class="small-text-muted">wedding tables</p>
+        <div class="name">
+          <span>{{tables.name}}</span>
+        </div>
+        <div class="price">
+
+            <p>{{tables.price | currency}}</p>
+
+        </div>
+      </div>
+
+  </div>
+  </li>
+</ul>
+

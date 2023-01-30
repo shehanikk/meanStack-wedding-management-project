@@ -23,7 +23,7 @@ router.get("/:productid" , aysnceHandler(
   }
 ))
 
-router.post('/addProduct' , aysnceHandler(
+router.post('/addItem' , aysnceHandler(
   async(req, res ) => {
     const {name, price,image,type} = req.body;
     try {
