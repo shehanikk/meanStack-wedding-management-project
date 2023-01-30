@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="details">
+    <form *ngIf="!isLoading" #form="ngForm" (ngSubmit)="submit(form)">
+
+      <input type="text" [ngModel]="product?.name" name="name"/>
+      <input type="number" [ngModel]="product?.price" name="price"/>
+      <select [ngModel]="product?.type" name="type">
+        <option value="stage">Camera</option>
+        <option value="table">Lenses</option>
+        <option value="danceMusical">Tripods</option>
+        <option value="cars">Other Items</option>
+      </select>
+      <p class="control">
+        <button class="button is-black is-outlined is-large is-fullwidth">
+          Update Job
+        </button>
+      </p>
+      <p class="control">
+        <button
+          class="button is-black is-outlined is-large is-fullwidth"
+          (click)="removeProduct()"
+        >
+          Delete Job
+        </button>
+      </p>
+      <p class="control">
+        <button
+          class="button is-black is-outlined is-large is-fullwidth"
+          routerLink="/admin-jobs"
+        >
+          Back to Jobs
+        </button>
+      </p>
+    </form>
+  </div>
+</div>

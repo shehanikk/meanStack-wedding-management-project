@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://localhost:3000';
 
 export const PRODUCT_URL = BASE_URL + '/api/wedding';
 export const PRODUCT_URL_BY_ID = PRODUCT_URL + '/'
@@ -13,5 +13,10 @@ export const ORDER_PAY_URL = ORDERS_URL + '/pay';
 export const ORDER_TRACK_URL = ORDERS_URL + '/track/';
 export const ADD_ITEM_URL = PRODUCT_URL + '/addItem';
 
+
+export const ITEM_URL = BASE_URL + '/api/items';
+export const ITEM_BY_ID_URL = ITEM_URL + '/';
+
+export const ITEM_UPDATE_URL = ITEM_URL + '/updateProduct';
 
 
