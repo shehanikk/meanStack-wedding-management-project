@@ -7,6 +7,7 @@ import weddingRouter from './routers/wedding.router';
 import userRouter from './routers/user.router';
 import { dbConnect } from './configs/database.config';
 import orderRouter from './routers/order.router';
+import itemRouter from './routers/item.router';
 
 dbConnect();
 
@@ -23,6 +24,9 @@ app.use(cors({
 app.use("/api/wedding", weddingRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
+app.use("/api/items", itemRouter);
+
+
 
 // app.get("/api/wedding", (req, res) => {
 //   res.send(example_weddingStage);
@@ -66,7 +70,7 @@ app.use("/api/orders", orderRouter);
 
 // }
 
-const port = 5000;
+const port = 3000;
 app.listen(port, () => {
   console.log("Website served on http://localhost:"+ port);
 })

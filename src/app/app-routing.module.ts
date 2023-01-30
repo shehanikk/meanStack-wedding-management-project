@@ -16,6 +16,7 @@ import { AdminComponent } from './admin-pages/admin/admin.component';
 import { WeddingTableComponent } from './wedding-tab-pages/wedding-table/wedding-table.component';
 import { DanceMusicalComponent } from './wedding-tab-pages/dance-musical/dance-musical.component';
 import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-cars.component';
+import { UpdateProductComponent } from './admin-pages/update-product/update-product.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -33,7 +34,8 @@ const routes: Routes = [
   {path: 'admin', component:AdminComponent},
   {path: 'table', component:WeddingTableComponent},
   {path: 'danceMusical', component:DanceMusicalComponent},
-  {path: 'weddingCar',component:WeddingCarsComponent}
+  {path: 'weddingCar',component:WeddingCarsComponent},
+  {path: 'update/:id', component:UpdateProductComponent}
 
 ];
 

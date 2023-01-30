@@ -35,6 +35,7 @@ import { AdminComponent } from './admin-pages/admin/admin.component';
 import { WeddingTableComponent } from './wedding-tab-pages/wedding-table/wedding-table.component';
 import { DanceMusicalComponent } from './wedding-tab-pages/dance-musical/dance-musical.component';
 import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-cars.component';
+import { UpdateProductComponent } from './admin-pages/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-c
     AdminComponent,
     WeddingTableComponent,
     DanceMusicalComponent,
-    WeddingCarsComponent
+    WeddingCarsComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
