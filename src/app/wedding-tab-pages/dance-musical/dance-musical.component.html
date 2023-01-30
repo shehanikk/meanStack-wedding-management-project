@@ -1,17 +1,17 @@
 <ul>
   <li *ngFor="let dances  of dances">
-    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(246, 246, 246);">
     <a routerLink="/stage/{{dances.id}}">
       <img [src]="dances.image || ''" [alt]="dances?.name" />
     </a>
       <div class="content">
-        <p class="small-text-muted">wedding dances</p>
+        <p class="small-text-muted">Dance and Musical groups</p>
         <div class="name">
-          <span>{{dances.name}}</span>
+          <span> Name : {{dances.name}}</span>
         </div>
         <div class="price">
 
-            <p>{{dances.price | currency}}</p>
+            <p> Price : {{dances.price | currency}}</p>
 
         </div>
       </div>
