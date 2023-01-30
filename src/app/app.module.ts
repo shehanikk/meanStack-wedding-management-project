@@ -17,7 +17,7 @@ import { CheckoutComponent } from './navpages/checkout/checkout.component';
 import { ItemDetailsComponent } from './view-item/item-details/item-details.component';
 import { OurProductsComponent } from './navpages/our-products/our-products.component';
 import { NotFoundPageComponent } from './navpages/not-found-page/not-found-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './main-pages/input-container/input-container.component';
@@ -61,6 +61,7 @@ import { AdminComponent } from './admin-pages/admin/admin.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
