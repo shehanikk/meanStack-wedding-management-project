@@ -42,28 +42,6 @@ router.get("/:productId", asyncHandler(
   }
 ))
 
-router.post('/addItem' , asyncHandler(
-  async(req, res ) => {
-    const {name, price,image,type} = req.body;
-    try {
-      const newProduct:Item = {
-        id: '',
-        name,
-        price,
-        image,
-        type
-      }
 
-      await ItemModel.create(newProduct);
-      res.status(201).json({
-        msg:'success'
-      })
-    } catch (error) {
-      res.status(HTTP_BAD_REQUEST).send();
-
-    }
-
-  }
-))
 
 export default router;

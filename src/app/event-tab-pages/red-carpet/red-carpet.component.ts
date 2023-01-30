@@ -4,20 +4,20 @@ import { ItemService } from 'src/app/services/item.service';
 import { Item } from 'wedding-backend/src/models/wedding.model';
 
 @Component({
-  selector: 'app-dance-musical',
-  templateUrl: './dance-musical.component.html',
-  styleUrls: ['./dance-musical.component.css']
+  selector: 'app-red-carpet',
+  templateUrl: './red-carpet.component.html',
+  styleUrls: ['./red-carpet.component.css']
 })
-export class DanceMusicalComponent implements OnInit {
+export class RedCarpetComponent implements OnInit {
 
-  dances:Item[]=[];
+  redCarpets:Item[]=[];
 
   constructor(private itemService: ItemService) {
     let productObservable: Observable<Item[]>;
-    productObservable = this.itemService.getAllDance();
+    productObservable = this.itemService.getAllRedcarpet();
 
-    productObservable.subscribe((serverDance => {
-      this.dances = serverDance;
+    productObservable.subscribe((serverRedcarpet => {
+      this.redCarpets = serverRedcarpet;
     }))
    }
 

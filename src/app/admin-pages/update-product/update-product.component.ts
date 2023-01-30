@@ -28,14 +28,7 @@ export class UpdateProductComponent implements OnInit {
     this.isLoading = true
     this.activatedRoute.params.subscribe((params) => {
       this.itemServices.getItemByItemId(params.id).subscribe((serverItem) => {
-        // this.updateProduct = new FormGroup({
-        //   name: [
-        //     serverItem.name,
-        //     [Validators.required, Validators.minLength(5)],
-        //   ],
-        //   price: [serverItem.price, [Validators.required]],
-        //   category: [serverItem.category, [Validators.required]],
-        //   imageUrl: [serverItem.imageUrl, [Validators.required]]
+
         this.product = serverItem;
         });
         this.isLoading = false
@@ -47,13 +40,7 @@ export class UpdateProductComponent implements OnInit {
   }
 
   submit(form:NgForm) {
-    // const fv = this.updateProduct.value;
-    // const product: IAddProduct = {
-    //   name: fv.name,
-    //   price: fv.price,
-    //   imageUrl: fv.imageUrl,
-    //   category: fv.category
-    // };
+
     const productId =  this.product?.id!
 
     this.itemServices.updateItemByItemId(form.value,productId).subscribe((_) => {

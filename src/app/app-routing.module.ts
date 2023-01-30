@@ -17,6 +17,10 @@ import { WeddingTableComponent } from './wedding-tab-pages/wedding-table/wedding
 import { DanceMusicalComponent } from './wedding-tab-pages/dance-musical/dance-musical.component';
 import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-cars.component';
 import { UpdateProductComponent } from './admin-pages/update-product/update-product.component';
+import { PartyDjComponent } from './party-tab-pages/party-dj/party-dj.component';
+import { BalloonComponent } from './party-tab-pages/balloon/balloon.component';
+import { StageDecorationsComponent } from './event-tab-pages/stage-decorations/stage-decorations.component';
+import { RedCarpetComponent } from './event-tab-pages/red-carpet/red-carpet.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -35,7 +39,11 @@ const routes: Routes = [
   {path: 'table', component:WeddingTableComponent},
   {path: 'danceMusical', component:DanceMusicalComponent},
   {path: 'weddingCar',component:WeddingCarsComponent},
-  {path: 'update/:id', component:UpdateProductComponent}
+  {path: 'update/:id', component:UpdateProductComponent},
+  {path: 'partydj',component:PartyDjComponent},
+  {path: 'balloon',component:BalloonComponent},
+  {path: 'stageDeco',component:StageDecorationsComponent},
+  {path: 'redCarpet',component:RedCarpetComponent}
 
 ];
 

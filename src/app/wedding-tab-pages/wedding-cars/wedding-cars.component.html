@@ -1,1 +1,22 @@
-<p>wedding-cars works!</p>
+<ul>
+  <li *ngFor="let cars  of cars">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <a routerLink="/stage/{{cars.id}}">
+      <img [src]="cars.image || ''" [alt]="cars?.name" />
+    </a>
+      <div class="content">
+        <p class="small-text-muted">wedding cars</p>
+        <div class="name">
+          <span>{{cars.name}}</span>
+        </div>
+        <div class="price">
+
+            <p>{{cars.price | currency}}</p>
+
+        </div>
+      </div>
+
+  </div>
+  </li>
+</ul>
+
