@@ -1,17 +1,17 @@
 <ul>
   <li *ngFor="let redCarpets  of redCarpets">
-    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(246, 246, 246);">
     <a routerLink="/stage/{{redCarpets.id}}">
       <img [src]="redCarpets.image || ''" [alt]="redCarpets?.name" />
     </a>
       <div class="content">
         <p class="small-text-muted">Red carpets</p>
         <div class="name">
-          <span>{{redCarpets.name}}</span>
+          <span> Name : {{redCarpets.name}}</span>
         </div>
         <div class="price">
 
-            <p>{{redCarpets.price | currency}}</p>
+            <p> Price : {{redCarpets.price | currency}}</p>
 
         </div>
       </div>

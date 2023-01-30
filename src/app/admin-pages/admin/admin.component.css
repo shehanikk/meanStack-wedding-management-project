@@ -9,14 +9,14 @@ ul{
 }
 
 li a{
-  height: 22.5rem;
+  height: 24.5rem;
   width: 20rem;
   border-radius: 1rem;
   margin: 0.5rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: #e72929;
+  color: #000000;
 }
 
 li a:hover{
@@ -43,7 +43,6 @@ li a:hover{
   position: absolute;
   bottom: 0;
   left: 0.9rem;
-
   color: #414141;
   margin-top: 0.7rem;
   font-size: 1.1rem;
@@ -55,8 +54,8 @@ li a:hover{
 }
 
 #pimg{
-  height: 150px;
-  width: 250px;
+  height: 250px;
+  width: 350px;
   display: flex;
   object-fit: cover;
   object-position: center;

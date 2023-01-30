@@ -46,18 +46,18 @@
 
  <ul>
   <li *ngFor="let stages  of stages">
-    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(246, 246, 246);">
     <a routerLink="/stage/{{stages.id}}">
       <img [src]="stages.image || ''" [alt]="stages?.name" />
     </a>
       <div class="content">
         <p class="small-text-muted">wedding stages</p>
         <div class="name">
-          <span>{{stages.name}}</span>
+          <span> Name : {{stages.name}}</span>
         </div>
         <div class="price">
 
-            <p>{{stages.price | currency}}</p>
+            <p> Price : {{stages.price | currency}}</p>
 
         </div>
       </div>

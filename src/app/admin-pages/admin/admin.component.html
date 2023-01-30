@@ -121,16 +121,17 @@
     <ul>
       <li *ngFor="let item of item">
         <a>
-          <div class="card">
+          <div class="card" style="background-color: rgb(240, 240, 240);">
             <img [src]="item.image" id="pimg" />
             <div class="container" style="align-items: flex-start">
-              <label>Name:{{ item.name }}</label
-              ><br />
-              <label>category:{{ item.type }}</label
-              ><br />
-              <label>Price:{{ item.price }}</label
-              ><br />
-              <button routerLink="/update/{{ item.id }}" >
+
+              <label>Name : {{ item.name }}</label>
+              <br/>
+              <label>Type : {{ item.type }}</label>
+              <br/>
+              <label>Price : {{ item.price }}</label>
+              <br/>
+              <button routerLink="/update/{{ item.id }}" class="btn btn-secondary" >
                 Update
               </button>
             </div>

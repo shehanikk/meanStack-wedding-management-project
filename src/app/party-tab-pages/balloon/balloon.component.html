@@ -1,17 +1,17 @@
 <ul>
   <li *ngFor="let balloons  of balloons">
-    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(241, 241, 241);">
+    <div class="card" style="border-radius: 15px; padding: 15px; margin: 20px; background-color: rgb(246, 246, 246);">
     <a routerLink="/stage/{{balloons.id}}">
       <img [src]="balloons.image || ''" [alt]="balloons?.name" />
     </a>
       <div class="content">
         <p class="small-text-muted">Balloon decorations</p>
         <div class="name">
-          <span>{{balloons.name}}</span>
+          <span> Name : {{balloons.name}}</span>
         </div>
         <div class="price">
 
-            <p>{{balloons.price | currency}}</p>
+            <p> Price : {{balloons.price | currency}}</p>
 
         </div>
       </div>
