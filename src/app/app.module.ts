@@ -32,6 +32,9 @@ import { PaymentPageComponent } from './payment/payment-page/payment-page.compon
 import { PaypalButtonComponent } from './payment/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './payment/order-track-page/order-track-page.component';
 import { AdminComponent } from './admin-pages/admin/admin.component';
+import { WeddingTableComponent } from './wedding-tab-pages/wedding-table/wedding-table.component';
+import { DanceMusicalComponent } from './wedding-tab-pages/dance-musical/dance-musical.component';
+import { WeddingCarsComponent } from './wedding-tab-pages/wedding-cars/wedding-cars.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { AdminComponent } from './admin-pages/admin/admin.component';
     PaymentPageComponent,
     PaypalButtonComponent,
     OrderTrackPageComponent,
-    AdminComponent
+    AdminComponent,
+    WeddingTableComponent,
+    DanceMusicalComponent,
+    WeddingCarsComponent
   ],
   imports: [
     BrowserModule,

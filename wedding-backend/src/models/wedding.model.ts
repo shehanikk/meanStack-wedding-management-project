@@ -5,6 +5,7 @@ export interface Item{
   image: string;
   name: string;
   price: number;
+  type: string;
 
 }
 
@@ -12,7 +13,8 @@ export const ItemSchema = new Schema<Item>(
   {
     name: {type: String, required:true},
     price: {type: Number, required:true},
-    image: {type: String, required:true}
+    image: {type: String, required:true},
+    type: {type: String, required:true}
 
   },{
     toJSON:{
