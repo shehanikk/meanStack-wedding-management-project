@@ -40,6 +40,7 @@ import { PartyDjComponent } from './party-tab-pages/party-dj/party-dj.component'
 import { BalloonComponent } from './party-tab-pages/balloon/balloon.component';
 import { StageDecorationsComponent } from './event-tab-pages/stage-decorations/stage-decorations.component';
 import { RedCarpetComponent } from './event-tab-pages/red-carpet/red-carpet.component';
+import { ViewOrdersComponent } from './view-item/view-orders/view-orders.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { RedCarpetComponent } from './event-tab-pages/red-carpet/red-carpet.comp
     PartyDjComponent,
     BalloonComponent,
     StageDecorationsComponent,
-    RedCarpetComponent
+    RedCarpetComponent,
+    ViewOrdersComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Add products</button>
     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Update products</button>
     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">View orders</button>
+
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
@@ -97,7 +98,7 @@
                   </div>
 
 
-                  <button  class="btn btn-success btn-lg mb-1" type="submit">Submit</button>
+                  <button  class="btn btn-success btn-lg mb-1" type="submit">Add product</button>
 
                 </form>
 
@@ -118,11 +119,11 @@
 
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
 
-    <ul>
+    <ul style="background-color: #f5f5f5;">
       <li *ngFor="let item of item">
         <a>
-          <div class="card" style="background-color: rgb(240, 240, 240);">
-            <img [src]="item.image" id="pimg" />
+          <div class="card" style="background-color: rgb(255, 255, 255);">
+            <img [src]="item.image" id="proimg" />
             <div class="container" style="align-items: flex-start">
 
               <label>Name : {{ item.name }}</label>
@@ -131,7 +132,7 @@
               <br/>
               <label>Price : {{ item.price }}</label>
               <br/>
-              <button routerLink="/update/{{ item.id }}" class="btn btn-secondary" >
+              <button routerLink="/update/{{ item.id }}" class="btn btn-success btn-sm">
                 Update
               </button>
             </div>
@@ -142,6 +143,38 @@
 
   </div>
 
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
 
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">..aaa.</div>
+    <section class="h-100 h-custom" style="background-color: #f5f5f5;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <img src="assets/images/view-img2.png"
+                class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                alt="Sample photo">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">View customer orders</h3>
+
+                <form class="px-md-2">
+
+
+                  <button class="btn btn-success btn-lg mb-1" routerLink="/viewOrder" >Orders</button>
+
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+
 </div>

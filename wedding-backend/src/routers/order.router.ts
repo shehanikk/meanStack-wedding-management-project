@@ -44,6 +44,8 @@ router.post('/pay', asyncHandler( async (req:any, res) => {
 
   order.paymentId = paymentId;
   order.status = OrderStatus.PAYED;
+  const io = req.app.get('io');
+    io.emit('orderAdded');
   await order.save();
 
   res.send(order._id);

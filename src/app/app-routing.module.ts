@@ -21,6 +21,8 @@ import { PartyDjComponent } from './party-tab-pages/party-dj/party-dj.component'
 import { BalloonComponent } from './party-tab-pages/balloon/balloon.component';
 import { StageDecorationsComponent } from './event-tab-pages/stage-decorations/stage-decorations.component';
 import { RedCarpetComponent } from './event-tab-pages/red-carpet/red-carpet.component';
+import { ViewOrdersComponent } from './view-item/view-orders/view-orders.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -43,7 +45,8 @@ const routes: Routes = [
   {path: 'partydj',component:PartyDjComponent},
   {path: 'balloon',component:BalloonComponent},
   {path: 'stageDeco',component:StageDecorationsComponent},
-  {path: 'redCarpet',component:RedCarpetComponent}
+  {path: 'redCarpet',component:RedCarpetComponent},
+  {path: 'viewOrder',component:ViewOrdersComponent}
 
 ];
 

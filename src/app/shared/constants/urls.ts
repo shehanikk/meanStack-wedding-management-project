@@ -41,5 +41,6 @@ export const ITEM_BY_ID_URL = ITEM_URL + '/';
 export const ITEM_UPDATE_URL = ITEM_URL + '/updateProduct';
 export const ADD_ITEM_URL = ITEM_URL + '/addItem';
 
+export const ORDER_DETAILS_URL = BASE_URL+ '/api/orderDetails';
 
 
