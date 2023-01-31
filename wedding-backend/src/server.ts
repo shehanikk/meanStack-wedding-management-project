@@ -15,6 +15,9 @@ import partyDjRouter from './routers/partyDj.router';
 import balloonRouter from './routers/balloon.router';
 import stageDecoRouter from './routers/stageDeco.router';
 import redCarpetRouter from './routers/redCarpet.router';
+import orderDetailsRouter from './routers/orderDetails.router';
+import {Server} from 'socket.io';
+import http = require('http');
 
 dbConnect();
 
@@ -28,6 +31,13 @@ app.use(cors({
   origin:["http://localhost:4200"]
 }));
 
+
+const serverSocket = http.createServer(app);
+const io = new Server(serverSocket, { cors: { origin: '*', },});
+app.set('io', io);
+
+
+
 app.use("/api/wedding", weddingRouter);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
@@ -39,6 +49,7 @@ app.use("/api/partyDj", partyDjRouter);
 app.use("/api/balloon", balloonRouter);
 app.use("/api/stageDeco", stageDecoRouter);
 app.use("/api/redCarpet", redCarpetRouter);
+app.use("/api/orderDetails", orderDetailsRouter);
 
 
 
@@ -88,6 +99,6 @@ app.use("/api/redCarpet", redCarpetRouter);
 // }
 
 const port = 3000;
-app.listen(port, () => {
+var server= serverSocket.listen(port, () => {
   console.log("Website served on http://localhost:"+ port);
 })

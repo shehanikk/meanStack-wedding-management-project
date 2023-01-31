@@ -1,0 +1,20 @@
+<ul>
+  <li *ngFor="let product of order">
+    <a>
+      <div class="card">
+        <!-- <img [src]="product.imageUrl" id="pimg" /> -->
+        <div class="container" style="align-items: flex-start">
+          <label>Name : {{ product.name }}</label
+          ><br />
+          <label>Adress : {{ product.address }}</label
+          ><br />
+          <label>Price : {{ product.totalPrice }}</label
+          ><br />
+          <label>Status : {{ product.status}}</label
+            ><br />
+            <label>Date & Time : {{ product.createdAt }}</label><br />
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

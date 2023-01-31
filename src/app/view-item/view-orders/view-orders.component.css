@@ -9,8 +9,8 @@ ul{
 }
 
 li a{
-  height: 24.5rem;
-  width: 20rem;
+  height: 10.5rem;
+  width: 25rem;
   border-radius: 1rem;
   margin: 0.5rem;
   display: flex;
@@ -33,8 +33,8 @@ li a:hover{
 .name{
   position: absolute;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #363535;
+  font-family: sans-serif;
+  color: #000000;
   justify-content: center;
 }
 
@@ -43,7 +43,8 @@ li a:hover{
   position: absolute;
   bottom: 0;
   left: 0.9rem;
-  color: #414141;
+
+  color: #000000;
   margin-top: 0.7rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -51,12 +52,4 @@ li a:hover{
 
 .small-text-muted{
   font-size: smaller;
-}
-
-#proimg{
-  height: 250px;
-  width: 350px;
-  display: flex;
-  object-fit: cover;
-  object-position: center;
 }
