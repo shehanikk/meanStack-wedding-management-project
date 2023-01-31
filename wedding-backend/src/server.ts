@@ -102,3 +102,5 @@ const port = 3000;
 var server= serverSocket.listen(port, () => {
   console.log("Website served on http://localhost:"+ port);
 })
+
+module.exports = app;
